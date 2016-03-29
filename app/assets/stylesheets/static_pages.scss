@@ -5,5 +5,15 @@
    img{
       width: 103%;
       margin-left: -1%;
+      position: relative;
+   }
+   h1{
+      font-family: 'Pacifico', cursive;
+      position: absolute;
+      top: 100px;
+      left: 20%;
+      width: 100%;
+      color: white;
+      font-size: 5.5em;
    }
 }
