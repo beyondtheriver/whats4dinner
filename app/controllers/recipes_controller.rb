@@ -18,6 +18,8 @@ class RecipesController < ApplicationController
      "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa",
      "Accept" => "application/json"
     }
+
+    
   end
 
   def individual_recipe
