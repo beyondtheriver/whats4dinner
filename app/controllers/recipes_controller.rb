@@ -19,6 +19,15 @@ class RecipesController < ApplicationController
      "Accept" => "application/json"
     }
 
+    
+  end
+
+  def individual_recipe
+
+     @resp = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + params[:id].to_s + "/information?includeNutrition=false",
+     headers:{
+     "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa"
+     }
 
 
   end
