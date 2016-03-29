@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  f_name: MyString
+  l_name: MyString
+  fav_recipe_id: 1
+
+two:
+  user_id: 1
+  f_name: MyString
+  l_name: MyString
+  fav_recipe_id: 1

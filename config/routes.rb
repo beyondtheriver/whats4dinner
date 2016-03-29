@@ -18,4 +18,7 @@ end
   get 'static_pages/contact'
 
   root 'static_pages#home'
+
+  resources :profiles
+
 end
