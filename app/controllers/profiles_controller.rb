@@ -14,6 +14,8 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.create(profile_params)
+    current_user
+    redirect_to profile_path(current_user)
   end
 
   def update
@@ -32,7 +34,7 @@ class ProfilesController < ApplicationController
   end
 
   def profile_params
-    params.require(:profile).permit(:fname, :lname)
+    params.require(:profile).permit(:f_name, :l_name).merge(user_id: current_user.id)
   end
 
 end
