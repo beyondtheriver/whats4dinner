@@ -5,7 +5,14 @@
    img{
       width: 103%;
       margin-left: -1%;
+      margin-top: -16px;
       position: relative;
+   }
+   #flashes{
+      position: absolute;
+      top: 25px;
+      color: white;
+      font-family: sans-serif;
    }
    h1{
       font-family: 'Pacifico', cursive;
