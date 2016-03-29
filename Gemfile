@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry-byebug', '~> 3.3'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
