@@ -1,0 +1,8 @@
+<% @response.body.each do |key| puts key %>
+
+	<ul>
+		<li> <%= key["title"] %> <%= image_tag(key["image"], :alt => "recipe picture", size: '200x200') %> </li>
+		
+	</ul>
+
+<% end %>
