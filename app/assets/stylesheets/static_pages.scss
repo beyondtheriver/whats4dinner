@@ -5,7 +5,35 @@
    img{
       width: 103%;
       margin-left: -1%;
+      margin-top: -16px;
       position: relative;
+   }
+   #button_style{
+      font-family: 'Pacifico', cursive;
+      font-size: .8em;
+      color: #e6cc22;
+      width: 10%;
+      height: 40px;
+      background-color: #4218e6;
+      padding: 0;
+      border: none;
+      border-radius: 10%;
+   }
+   .sign_up{
+      position: absolute;
+      top: 25px;
+      right: 25px;
+   }
+   .log_in{
+      position: absolute;
+      top: 75px;
+      right: 25px;
+   }
+   #flashes{
+      position: absolute;
+      top: 25px;
+      color: white;
+      font-family: sans-serif;
    }
    h1{
       font-family: 'Pacifico', cursive;
