@@ -5,9 +5,13 @@ Rails.application.routes.draw do
 devise_scope :user do
     get '/users/auth/:provider/callback' => 'omniauth_callbacks#test'
 end
-
   get 'recipes/index'
-  post 'ingredient_search' => 'recipes#index'
+
+  resources :recipes
+
+  get '/recipes/show' => 'recipes#show'
+  
+  post 'ingredient_search' => 'recipes#show'
 
   get 'static_pages/home'
 
