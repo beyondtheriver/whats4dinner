@@ -6,6 +6,9 @@ devise_scope :user do
     get '/users/auth/:provider/callback' => 'omniauth_callbacks#test'
 end
 
+  get 'recipes/index'
+  post 'ingredient_search' => 'recipes#index'
+
   get 'static_pages/home'
 
   get 'static_pages/contact'

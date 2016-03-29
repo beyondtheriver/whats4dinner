@@ -1,0 +1,23 @@
+
+
+
+
+#contents of app/views/recipes/index.html.erb
+<h1>Searching for - <%= @search_term %></h1>
+
+<%= render 'search' %>
+<br>
+<%= @ingredients %>
+
+
+<%= @recipes %>
+
+
+<h1> <%= @titles[0] %></h1>
+
+
+<%= image_tag(@images[0], :alt => "rss feed") %>
+
+<%= raw @instructs %>
+<br>
+

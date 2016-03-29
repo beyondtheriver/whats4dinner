@@ -1,0 +1,16 @@
+<div>
+
+<%= form_tag('/ingredient_search') do %>
+  Search for recipes:<br>
+  <%= label_tag(:ingredients, "Search ingredients for:") %><br>
+   <%= text_field_tag('ingredients[]') %>
+   <%= text_field_tag('ingredients[]') %>
+   <%= text_field_tag('ingredients[]') %>
+
+
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+
+</div>
