@@ -7,9 +7,15 @@
 <br>
 <%= raw @resp.body["instructions"] %>
 
-<%= @resp.body["extendedIngredients"] %>
 
+<ul>
+<% @resp.body["extendedIngredients"].each do |key| %>
+	<li><%=	key["originalString"] %></li>
+<% end %>
+</ul>
+<br>
 
+<%= @resp.body["vegetarian"] %>
 
 <br>
 

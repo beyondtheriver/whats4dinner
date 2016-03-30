@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauth_providers => [:twitter]
 
+  has_one :profile, dependent: :destroy
+  has_many :user_recipes, dependent: :destroy
+  has_many :recipes, through: :user_recipes
+
    def self.from_omniauth(auth)
       where(auth.slice(provider: auth.provider, uid: auth.uid)).first_or_create do |user|
          user.provider = auth.provider

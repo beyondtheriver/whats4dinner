@@ -1,5 +1,19 @@
 class UsersController < ApplicationController
 
+	def create
+
+	end
+
+	def update
+
+	end
+
+	def show
+
+	end
+
+	
+
   def destroy
     @user = current_user
     @user.destroy
