@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users,
              :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
-             delete 'users/cancel' => 'devise/registrations#destroy'
 
 devise_scope :user do
     get '/users/auth/:provider/callback' => 'omniauth_callbacks#test'
@@ -12,8 +11,9 @@ end
   get 'recipes/individual_recipe/:id' => 'recipes#individual_recipe'
 
   get '/recipes/show' => 'recipes#show'
-
+  
   post 'ingredient_search' => 'recipes#show'
+
 
   get 'recipes/index'
 
