@@ -19,9 +19,19 @@ class RecipesController < ApplicationController
      "Accept" => "application/json"
     }
 
+    cookies[:list_of_recipes] = JSON.generate(@response.body)
+   
+   @cookiesstring = cookies[:list_of_recipes]
+
+    @cookievalue = JSON.parse(@cookiesstring)
+
+    puts @cookievalue[1]["title"]
+   
+    # puts JSON.parse(cookies[:list_of_recipes].to_s)
+    puts @cookievalue
 
     
-
+    
     
   end
 
@@ -34,6 +44,16 @@ class RecipesController < ApplicationController
      "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa"
      }
 
+     @cookievalue = JSON.parse(cookies[:list_of_recipes])
+
+
+     @cookievalue.each do |key|
+        if key["id"] == params[:id].to_i
+          @title = key["title"]
+          @image = key["image"]
+        end
+      end
+   
 
   end
 

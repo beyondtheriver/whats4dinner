@@ -26,4 +26,3 @@ end
 
   resources :profiles
 end
->>>>>>> 35494702bbb952fa532c47ad51750a626416ffa9

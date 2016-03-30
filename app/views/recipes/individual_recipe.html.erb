@@ -1,13 +1,20 @@
 
+<%= @title  %>
 
+<br>
+
+<%= image_tag(@image, :alt => "recipe picture", size: '200x200') %> 
+<br>
 <%= raw @resp.body["instructions"] %>
 
+<%= @resp.body["extendedIngredients"] %>
 
-<%= @currenttitle %>
-<%= @currentimage %>
 
 
 <br>
 
-<%= @resp.body %>
+
+
+<br>
+
 
