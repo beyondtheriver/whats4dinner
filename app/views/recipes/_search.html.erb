@@ -1,14 +1,13 @@
 <div id="ingredForm">
 
-<%= form_tag('/ingredient_search', :id => 'searchForm') do %>
-  Search for recipes:<br>
-  <%= label_tag(:ingredients, "Search ingredients for:") %><br>
-   <%= text_field_tag('ingredients[]') %>
-<button class="add_field_button">Add More Ingredients</button>
+   <%= form_tag('/ingredient_search', :id => 'searchForm') do %>
+      <%= label_tag(:ingredients, "What Ingredients Do You Have?") %><br>
+      <%= text_field_tag('ingredients[]') %>
+   <button id="add_more_button" class="add_field_button">Add More Ingredients</button>
 
 
-  <%= submit_tag("Search") %>
-<% end %>
+      <%= submit_tag "Start Cooking!", id: "ingredient_search" %>
+   <% end %>
 
 </div>
 

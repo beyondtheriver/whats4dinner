@@ -1,3 +1,39 @@
-// Place all the styles related to the recipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#recipe_wrapper{
+   font-family: 'Roboto Condensed', sans-serif;
+   padding-left: 40px;
+}
+#add_more_button{
+   border: none;
+   font-family: 'Roboto Condensed', sans-serif;
+   background-color: #ff8c00;
+}
+#ingredient_search{
+   border: none;
+   font-family: 'Roboto Condensed', sans-serif;
+   color: white;
+   background-color: #b50000;
+}
+#recipe_responses{
+   display: flex;
+   flex-wrap: wrap;
+}
+.response_item{
+   width: 200px;
+   height: 200px;
+   margin-right: 25px;
+   margin-left: 25px;
+   margin-bottom: 75px;
+   font-family: 'Roboto Condensed', sans-serif;
+   text-align: center;
+      a:link{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:visited{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+}
