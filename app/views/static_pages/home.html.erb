@@ -1,16 +1,27 @@
-   <div id="header_pic">
-      <%= image_tag "shrimp_dinner.jpg" %>
-      <button id="button_style" class="sign_up">Sign Up!</button>
-      <button id="button_style" class="log_in">Log In!</button>
-      <span id="flashes">
-         <% if current_user %>
-            Welcome <%= current_user.email %> <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-         <% else %>
-            <%= link_to "Sign Up", new_user_registration_path %>
-            <%= link_to "Log In", new_user_session_path %>
-            <%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %>
-         <% end %>
-      </span>
-      <span id="header_title"><h1>What's 4 Dinner</h1></span>
+<div id="header_pic">
+   <%= image_tag "shrimp_dinner.jpg" %>
+   <button id="button_style" class="sign_up"><%= link_to "Sign Up!", new_user_registration_path %></button>
+   <button id="button_style" class="log_in"><%= link_to "Log In!", new_user_session_path %></button>
+   <span id="flashes">
+      <% if current_user %>
+         Welcome <%= current_user.email %> <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      <% else %>
+         <%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %>
+      <% end %>
+   </span>
+   <span id="header_title"><h1>What's 4 Dinner</h1></span>
+</div>
+<div id="features3">
+   <div id="feature_left" class="features3">
+      <%= image_tag "question_mark.png" %></br>
+      <p>Can't decide what to make? Tell us your ingredients, and we'll give you back a bevy of recipes that include them!</p>
    </div>
-
+   <div id="feature_middle" class="features3">
+      <%= image_tag "heart.png" %></br>
+      <p>Enjoy the recipe you made? Like it, and it stays in your favorites for easy access!</p>
+   </div>
+   <div id="feature_right" class="features3">
+      <%= image_tag "twitter_icon.png" %></br>
+      <p>Can't decide which recipe to make? Tweet out your query and have your followers chime in!</p>
+   </div>
+</div>

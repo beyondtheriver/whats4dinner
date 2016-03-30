@@ -18,6 +18,15 @@
       padding: 0;
       border: none;
       border-radius: 10%;
+         a:link{
+            text-decoration: none;
+         }
+         a:visited{
+            text-decoration: none;
+         }
+         a:hover{
+            color: hotpink;
+         }
    }
    .sign_up{
       position: absolute;
@@ -43,5 +52,23 @@
       width: 100%;
       color: white;
       font-size: 5.5em;
+   }
+}
+#features3{
+   display: flex;
+   justify-content: space-around;
+   background-color: gray;
+   width: 102%;
+   margin-left: -9px;
+   margin-top: -4px;
+   .features3{
+      img{
+         width: 225px;
+         height: auto;
+         }
+      p{
+         width: 225px;
+         font-family: 'Pacifico', cursive;
+      }
    }
 }
