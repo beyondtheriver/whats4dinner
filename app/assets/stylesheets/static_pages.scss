@@ -20,9 +20,11 @@
       border-radius: 10%;
          a:link{
             text-decoration: none;
+            color: #e6cc22;
          }
          a:visited{
             text-decoration: none;
+            color: #e6cc22;
          }
          a:hover{
             color: hotpink;
@@ -70,5 +72,24 @@
          width: 225px;
          font-family: 'Pacifico', cursive;
       }
+   }
+}
+#who_we_are{
+   display: flex;
+   background-color: #add8e6;
+   width: 102%;
+   margin-left: -9px;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   img{
+      width: 20%;
+      height: 20%;
+      border-radius: 20%;
+      margin-left: 20px;
+   }
+   #description{
+      margin-left: 20px;
+      padding-right: 25px;
+      font-family: 'Roboto Condensed', sans-serif;
    }
 }
