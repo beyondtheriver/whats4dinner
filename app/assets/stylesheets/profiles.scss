@@ -1,3 +1,66 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+   background-color: #add8e6;
+}
+#banner{
+   background-color: #4218e6;
+   font-family: 'Pacifico', cursive;
+   color: white;
+   width: 102%;
+   margin-left: -9px;
+   margin-top: -20px;
+   margin-bottom: 35px;
+   h2{
+      text-align: right;
+      padding-right: 30px;
+      a:link{
+         text-decoration: none;
+         color: white;
+      }
+      a:visited{
+         text-decoration: none;
+         color: white;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+}
+#come_in_form{
+   width: 31%;
+   margin: auto;
+   padding-bottom: 25px;
+   border: 5px solid black;;
+   border-radius: 15%;
+   font-family: 'Roboto Condensed', sans-serif;
+   text-align: center;
+   color: #4218e6;
+   h2{
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+   }
+   #form_button{
+      border: none;
+      border-radius: 10%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: #ff8c00;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: .8em;
+      cursor: pointer;
+   }
+   #devise_links{
+      a:link{
+            color: #4218e6;
+      }
+      a:visited{
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+}

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160329194645) do
+ActiveRecord::Schema.define(version: 20160330200623) do
+
+  create_table "extended_ingredients", force: :cascade do |t|
+    t.text     "original_string"
+    t.string   "name"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -22,7 +35,29 @@ ActiveRecord::Schema.define(version: 20160329194645) do
     t.datetime "updated_at",    null: false
   end
 
+  create_table "recipe_ingredients", force: :cascade do |t|
+    t.integer  "recipe_id"
+    t.integer  "ingredient_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "recipes", force: :cascade do |t|
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "api_id"
+    t.string   "title"
+    t.text     "image"
+    t.boolean  "vegetarian"
+    t.boolean  "vegan"
+    t.boolean  "gluten_free"
+    t.boolean  "dairy_free"
+    t.text     "instructions"
+  end
+
+  create_table "user_recipes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
