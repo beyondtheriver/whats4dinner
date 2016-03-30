@@ -55,14 +55,14 @@
       a:link{
             text-decoration: none;
             color: white;
-         }
-         a:visited{
-            text-decoration: none;
-            color: white;
-         }
-         a:hover{
-            color: hotpink;
-         }
+      }
+      a:visited{
+         text-decoration: none;
+         color: white;
+      }
+      a:hover{
+         color: hotpink;
+      }
    }
    #flashes{
       position: absolute;
@@ -89,15 +89,17 @@
    margin-top: -4px;
    padding-top: 25px;
    padding-bottom: 15px;
-   .features3{
-      img{
-         width: 225px;
-         height: auto;
-         }
-      p{
-         width: 225px;
-         font-family: 'Pacifico', cursive;
+}
+.features3{
+   img{
+      width: 225px;
+      height: auto;
+      cursor: pointer;
       }
+   p{
+      width: 225px;
+      font-family: 'Pacifico', cursive;
+      text-align: center;
    }
 }
 #who_we_are{
