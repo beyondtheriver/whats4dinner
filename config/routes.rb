@@ -1,21 +1,28 @@
 Rails.application.routes.draw do
   devise_for :users,
              :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
+             delete 'users/cancel' => 'devise/registrations#destroy'
 
 devise_scope :user do
     get '/users/auth/:provider/callback' => 'omniauth_callbacks#test'
 end
-  get 'recipes/index'
 
-  resources :recipes
+
+
+  get 'recipes/individual_recipe/:id' => 'recipes#individual_recipe'
 
   get '/recipes/show' => 'recipes#show'
-  
+
   post 'ingredient_search' => 'recipes#show'
+
+  get 'recipes/index'
 
   get 'static_pages/home'
 
   get 'static_pages/contact'
 
   root 'static_pages#home'
+
+
+  resources :profiles
 end

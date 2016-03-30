@@ -1,0 +1,8 @@
+
+  <h2><%= @profile.f_name %>'s Profile</h2>
+  <p>Name: <%= @profile.f_name %> <%= @profile.l_name %></p>
+
+  <h2><%= @profile.f_name %>'s Recipes</h2>
+<%# Insert links to recipes here -%>
+
+<%= link_to 'Delete Your Account', users_cancel_path(current_user), :method => :delete %>
