@@ -53,16 +53,17 @@
       border: none;
       border-radius: 10%;
       a:link{
-            text-decoration: none;
-            color: white;
-         }
-         a:visited{
-            text-decoration: none;
-            color: white;
-         }
-         a:hover{
-            color: hotpink;
-         }
+         text-decoration: none;
+         color: white;
+      }
+      a:visited{
+         text-decoration: none;
+         color: white;
+      }
+      a:hover{
+         color: hotpink;
+      }
+
    }
    #flashes{
       position: absolute;
@@ -89,6 +90,7 @@
    margin-top: -4px;
    padding-top: 25px;
    padding-bottom: 15px;
+<<<<<<< HEAD
    .features3{
       img{
          width: 225px;
@@ -97,7 +99,38 @@
       p{
          width: 225px;
          font-family: 'Pacifico', cursive;
+=======
+}
+.features3{
+   img{
+      width: 225px;
+      height: auto;
+      cursor: pointer;
+>>>>>>> 009b0b905522fc68bec4ac26d7a1220fc61d710c
       }
+   p{
+      width: 225px;
+      font-family: 'Pacifico', cursive;
+      text-align: center;
+   }
+}
+#who_we_are{
+   display: flex;
+   background-color: #add8e6;
+   width: 102%;
+   margin-left: -9px;
+   padding-top: 35px;
+   padding-bottom: 35px;
+   img{
+      width: 20%;
+      height: 20%;
+      border-radius: 20%;
+      margin-left: 20px;
+   }
+   #description{
+      margin-left: 20px;
+      padding-right: 25px;
+      font-family: 'Roboto Condensed', sans-serif;
    }
 }
 #who_we_are{

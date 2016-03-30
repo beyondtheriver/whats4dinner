@@ -12,16 +12,42 @@
 </div>
 <div id="features3">
    <div id="feature_left" class="features3">
-      <%= image_tag "question_mark.png" %></br>
-      <p>Can't decide what to make? Tell us your ingredients, and we'll give you back a bevy of recipes that include them!</p>
+      <%= image_tag "question_mark.png", class: "modal_button" %></br>
+      <p>Can't decide what to make?</p>
+      <div class="modal_features">
+         <div class="modal-content">
+            <span class="close">x</span>
+            <p>Tell us your ingredients, and we'll give you back a bevy of recipes that include them!</p>
+         </div>
+      </div>
    </div>
    <div id="feature_middle" class="features3">
-      <%= image_tag "heart.png" %></br>
-      <p>Enjoy the recipe you made? Like it, and it stays in your favorites for easy access!</p>
+      <%= image_tag "heart.png", class: "modal_button" %></br>
+      <p>Enjoy the recipe you made?</p>
+      <div class="modal_features">
+         <div class="modal-content">
+            <span class="close">x</span>
+            <p>Like it, and it stays in your favorites for easy access!</p>
+         </div>
+      </div>
    </div>
    <div id="feature_right" class="features3">
-      <%= image_tag "twitter_icon.png" %></br>
-      <p>Can't decide which recipe to make? Tweet out your query and have your followers chime in!</p>
+      <%= image_tag "twitter_icon.png", class: "modal_button" %></br>
+      <p>Want your friends to chime in?</p>
+      <div class="modal_features">
+         <div class="modal-content">
+            <span class="close">x</span>
+            <p>Tweet out your query and have your followers chime in!</p>
+         </div>
+      </div>
+   </div>
+</div>
+<div id="who_we_are">
+   <%= image_tag "cerberus.png" %>
+   <div id="description">
+      <h2>The Mighty Three</h2>
+      <h4>Who We Are:</h4>
+      <p>Rick Mitchell, Zachary Uzupis, and Bill Zerega started <strong>What's 4 Dinner</strong> because they were hungry, but too lazy to go to the grocery store. <strong>What's 4 Dinner</strong> was made in one week as a part of a group assignment within the Web Development Intensive at the <strong>New York Code and Design Academy</strong>'s Philadelphia Campus.</p>
    </div>
 </div>
 <div id="who_we_are">

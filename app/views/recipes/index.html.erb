@@ -1,20 +1,21 @@
+<div id="banner">
+  <h2><%= link_to "What's 4 Dinner", root_path %></h2>
+</div>
+<div id="recipe_wrapper">
+   <h1>Recipe Finder</h1>
+
+   <%= render 'search' %>
+
+   <br>
+   <%= @ingredients %>
+
+
+   <%= @recipes %>
 
 
 
 
-<h1>Searching for - <%= @search_term %></h1>
 
-<%= render 'search' %>
+   <br>
 
-<br>
-<%= @ingredients %>
-
-
-<%= @recipes %>
-
-
-
-
-
-<br>
-
+</div>
