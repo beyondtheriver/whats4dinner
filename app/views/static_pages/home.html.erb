@@ -2,11 +2,10 @@
    <%= image_tag "shrimp_dinner.jpg" %>
    <button id="button_style" class="sign_up"><%= link_to "Sign Up!", new_user_registration_path %></button>
    <button id="button_style" class="log_in"><%= link_to "Log In!", new_user_session_path %></button>
+   <button class="with_twitter"><%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %></button>
    <span id="flashes">
       <% if current_user %>
          Welcome <%= current_user.email %> <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-      <% else %>
-         <%= link_to "Log In with Twitter", user_omniauth_authorize_path(:twitter) %>
       <% end %>
    </span>
    <span id="header_title"><h1>What's 4 Dinner</h1></span>

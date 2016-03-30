@@ -40,6 +40,30 @@
       top: 75px;
       right: 25px;
    }
+   .with_twitter{
+      position: absolute;
+      top: 400px;
+      right: 25px;
+      width: 10%;
+      height: 50px;
+      font-family: 'Pacifico', cursive;
+      font-size: .8em;
+      background-color: #4099FF;
+      color: white;
+      border: none;
+      border-radius: 10%;
+      a:link{
+            text-decoration: none;
+            color: white;
+         }
+         a:visited{
+            text-decoration: none;
+            color: white;
+         }
+         a:hover{
+            color: hotpink;
+         }
+   }
    #flashes{
       position: absolute;
       top: 25px;
@@ -63,6 +87,8 @@
    width: 102%;
    margin-left: -9px;
    margin-top: -4px;
+   padding-top: 25px;
+   padding-bottom: 15px;
    .features3{
       img{
          width: 225px;
@@ -79,8 +105,8 @@
    background-color: #add8e6;
    width: 102%;
    margin-left: -9px;
-   padding-top: 25px;
-   padding-bottom: 25px;
+   padding-top: 35px;
+   padding-bottom: 35px;
    img{
       width: 20%;
       height: 20%;
