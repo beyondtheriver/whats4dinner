@@ -5,15 +5,27 @@
 
 <%= image_tag(@image, :alt => "recipe picture", size: '200x200') %>
 <br>
-<%= raw @resp.body["instructions"] %>
+
+<%= raw @recipe.instructions %>
+
 
 
 <ul>
-<% @resp.body["extendedIngredients"].each do |key| %>
-	<li><%=	key["originalString"] %></li>
+<% @extended_ing.each do |key| %>
+	<li><%=	key.original_string %></li>
 <% end %>
 </ul>
+
+
+
+
+
 <br>
+<<<<<<< HEAD
+
+<%= @recipe.vegetarian %>
+
+=======
 Vegetarian:
      <% if @resp.body["vegetarian"] === true %>
      <%= "Yes" %>
@@ -41,6 +53,7 @@ Dairy Free:
      <% else %>
      <%= "No" %>
       <%  end %>
+>>>>>>> 78dda232690341d4babb0b1e37f8e7ea22cde1ab
 <br>
 
 <br>
