@@ -2,21 +2,14 @@
 	<%= render 'banner' %>
   <h2><%= link_to "What's 4 Dinner", root_path %></h2>
 </div>
-<div id="recipe_wrapper">
-   <h1>Recipe Finder</h1>
-
- <%= render partial: "profiles/show", locals: { profile: @profile } %>
-
-   <%= render 'search' %>
-
-
-   <br>
-
-
-
-   <br>
-
-<a href="https://twitter.com/intent/tweet?text=what%20should%20I%20make?">Tweet for Help!</a>
+<div id="whole_page_wrapper">
+   <div id="profile_partial">
+      <%= render partial: "profiles/show", locals: { profile: @profile } %>
+   </div>
+   <div id="recipe_wrapper">
+      <h1>Recipe Finder</h1>
+      <%= render 'search' %>
+      <a id="twitter_intent" href="https://twitter.com/intent/tweet?text=what%20should%20I%20make?">Tweet for Help!</a>
+      <div id='recipe-search-container'></div>
+   </div>
 </div>
-
-<div id='recipe-search-container'></div>
