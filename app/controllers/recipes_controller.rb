@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
       @recipe = Recipe.where(api_id: params[:id]).take
       @image = @recipe.image
       @title = @recipe.title
-      @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id)
+      @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id).take
 
     else
 
