@@ -16,7 +16,5 @@ $(document).ready(function() {
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 
-    $(window).on('ajax:send', function() {
-        alert('clicked')
-    })
+    
 });
