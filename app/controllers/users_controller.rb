@@ -12,14 +12,15 @@ class UsersController < ApplicationController
 
 	end
 
-	
+
 
   def destroy
-    @user = current_user
-    @user.destroy
-    session[:user_id] = nil
-    flash[:notice] = "Your account was deleted"
-    redirect_to '/'
+
+    if current_user.destroy
+
+      flash[:notice] = "Your account was deleted"
+      sign_out_and_redirect current_user
+    end
   end
 
 end
