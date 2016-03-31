@@ -17,28 +17,28 @@
     <%= raw @recipe.instructions %>
     <br>
     Vegetarian:
-         <% if @resp.body["vegetarian"] === true %>
+         <% if @recipe.vegetarian === true %>
          <%= "Yes" %>
          <% else %>
          <%= "No" %>
           <%  end %>
     <br>
     Vegan:
-         <% if @resp.body["vegan"] === true %>
+         <% if @recipe.vegan === true %>
          <%= "Yes" %>
          <% else %>
          <%= "No" %>
           <%  end %>
     <br>
     Gluten Free:
-         <% if @resp.body["glutenFree"] === true %>
+         <% if @recipe.gluten_free === true %>
          <%= "Yes" %>
          <% else %>
          <%= "No" %>
           <%  end %>
     <br>
     Dairy Free:
-         <% if @resp.body["dairyFree"] === true %>
+         <% if @recipe.dairy_free === true %>
          <%= "Yes" %>
          <% else %>
          <%= "No" %>
