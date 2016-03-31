@@ -3,7 +3,7 @@
 
 <br>
 
-<%= image_tag(@image, :alt => "recipe picture", size: '200x200') %> 
+<%= image_tag(@image, :alt => "recipe picture", size: '200x200') %>
 <br>
 <%= raw @resp.body["instructions"] %>
 
@@ -14,12 +14,34 @@
 <% end %>
 </ul>
 <br>
-
-<%= @resp.body["vegetarian"] %>
-
+Vegetarian:
+     <% if @resp.body["vegetarian"] === true %>
+     <%= "Yes" %>
+     <% else %>
+     <%= "No" %>
+      <%  end %>
 <br>
-
-
+Vegan:
+     <% if @resp.body["vegan"] === true %>
+     <%= "Yes" %>
+     <% else %>
+     <%= "No" %>
+      <%  end %>
+<br>
+Gluten Free:
+     <% if @resp.body["glutenFree"] === true %>
+     <%= "Yes" %>
+     <% else %>
+     <%= "No" %>
+      <%  end %>
+<br>
+Dairy Free:
+     <% if @resp.body["dairyFree"] === true %>
+     <%= "Yes" %>
+     <% else %>
+     <%= "No" %>
+      <%  end %>
+<br>
 
 <br>
 
