@@ -3,6 +3,10 @@ class RecipesController < ApplicationController
 
 
   def index
+    if current_user
+      @profile = current_user.profile
+    else 
+    end
 
   end
 
@@ -24,6 +28,11 @@ class RecipesController < ApplicationController
     
     # @recipe = Recipe.find(params[:id])
     
+    # render partial: 'recipes/show'
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def individual_recipe
@@ -55,14 +64,30 @@ class RecipesController < ApplicationController
         @resp.body["extendedIngredients"].each do |key|
            x = ExtendedIngredient.create(:original_string =>  key["originalString"] , :name => key["name"], :recipe_id => @recipe.id)      
            @extended_ing.push(x)
-           Ingredient.create(:name => key["name"])
+           @ingredient = Ingredient.create(:name => key["name"])
+           RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ingredient.id)
          end 
+
+         #favorite recipe
+         
+
 
     end
 
 
       
   end
+
+  def favorite
+    @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
+
+    # render nothing: true
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
 
   def new_API_first_call(ingredientssearch)
    #first call to API get a list of recipes we need to display
@@ -85,6 +110,8 @@ class RecipesController < ApplicationController
 
 
   end
+
+  
 
 private
 

@@ -1,21 +1,21 @@
 <div id="banner">
+	<%= render 'banner' %>
   <h2><%= link_to "What's 4 Dinner", root_path %></h2>
 </div>
 <div id="recipe_wrapper">
    <h1>Recipe Finder</h1>
 
+ <%= render partial: "profiles/show", locals: { profile: @profile } %>
+
    <%= render 'search' %>
 
+   
    <br>
-   <%= @ingredients %>
-
-
-   <%= @recipes %>
-
-
-
+ 
 
 
    <br>
 
 </div>
+
+<div id='recipe-search-container'></div>

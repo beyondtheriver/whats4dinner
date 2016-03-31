@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
          user.uid = auth.uid
          user.username = auth.info.nickname
       end
+
+      
    end
    def self.new_with_session(params, session)
       if session["devise.user_attributes"]
