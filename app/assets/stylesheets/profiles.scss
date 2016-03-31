@@ -41,7 +41,7 @@ body{
       font-family: 'Pacifico', cursive;
       font-size: 3em;
    }
-   #form_button{
+   .form_button{
       border: none;
       border-radius: 10%;
       margin-top: 10px;
@@ -62,5 +62,57 @@ body{
       a:hover{
          color: hotpink;
       }
+   }
+}
+#profile_wrapper{
+   font-family: 'Roboto Condensed', sans-serif;
+   padding-left: 40px;
+}
+#edit_button{
+   border-radius: 10%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 5px;
+   width: 10%;
+   height: auto;
+   background-color: #ff8c00;
+   text-align: center;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: .8em;
+   cursor: pointer;
+   a:link{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:visited{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:hover{
+      color: white;
+   }
+}
+#delete_button{
+   border-radius: 10%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 5px;
+   width: 10%;
+   height: auto;
+   background-color: red;
+   text-align: center;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-size: .8em;
+   cursor: pointer;
+   a:link{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:visited{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:hover{
+      color: white;
    }
 }

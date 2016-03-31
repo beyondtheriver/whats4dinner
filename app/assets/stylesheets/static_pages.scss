@@ -70,6 +70,15 @@
       top: 25px;
       color: white;
       font-family: sans-serif;
+      a:link{
+         color: white;
+      }
+      a:visited{
+         color: white;
+      }
+      a:hover{
+         color: hotpink;
+      }
    }
    h1{
       font-family: 'Pacifico', cursive;
