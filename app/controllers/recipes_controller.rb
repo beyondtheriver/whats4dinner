@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create(recipe_params)
+    # @recipe = Recipe.create(recipe_params)
   end
 
   def destroy
@@ -18,38 +18,70 @@ class RecipesController < ApplicationController
 
     ingredientssearch = params[:ingredients].join(",")
 
-  #first call to API get a list of recipes we need to display
-   @response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients="+ ingredientssearch +"&limitLicense=true&number=10&ranking=1",
+
+     cookies[:list_of_recipes] = new_API_first_call(ingredientssearch)
+   
+    
+    # @recipe = Recipe.find(params[:id])
+    
+  end
+
+  def individual_recipe
+    # the params[:id] here is actually the API id 6 digit
+    if (Recipe.where("api_id = ?", params[:id]) == true)
+      
+
+      @recipe = Recipe.where(api_id: params[:id]).take
+      @image = @recipe.image
+      @title = @recipe.title
+      @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id)
+
+    else
+
+      @resp = second_API_call_one_recipe(params[:id].to_s)
+       @cookievalue = JSON.parse(cookies[:list_of_recipes])
+       
+       @cookievalue.each do |key|
+          if key["id"] == params[:id].to_i
+            @id = key["id"]
+            @title = key["title"]
+            @image = key["image"]
+          end
+        end
+       
+        @recipe = Recipe.create(:api_id => @id, :title => @title, :image => @image, :vegetarian => @resp.body['vegetarian'], :vegan => @resp.body['vegan'], :gluten_free => @resp.body['glutenFree'], :dairy_free => @resp.body['dairyFree'], :instructions => @resp.body['instructions'])
+
+        @extended_ing = []
+        @resp.body["extendedIngredients"].each do |key|
+           x = ExtendedIngredient.create(:original_string =>  key["originalString"] , :name => key["name"], :recipe_id => @recipe.id)      
+           @extended_ing.push(x)
+           Ingredient.create(:name => key["name"])
+         end 
+
+    end
+
+
+      
+  end
+
+  def new_API_first_call(ingredientssearch)
+   #first call to API get a list of recipes we need to display
+   @response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients="+ ingredientssearch +"&limitLicense=true&number=12&ranking=1",
     headers:{
      "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa",
      "Accept" => "application/json"
     }
-    cookies[:list_of_recipes] = JSON.generate(@response.body)
-    @cookiesstring = cookies[:list_of_recipes]
-    @cookievalue = JSON.parse(@cookiesstring)
 
 
-
-   # @recipe = Recipe.find(params[:id])
-
-
-
+    JSON.generate(@response.body)
   end
 
-  def individual_recipe
-
-     @resp = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + params[:id].to_s + "/information?includeNutrition=false",
+  def second_API_call_one_recipe(id)
+    resp = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + id + "/information?includeNutrition=false",
      headers:{
      "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa"
      }
-
-     @cookievalue = JSON.parse(cookies[:list_of_recipes])
-     @cookievalue.each do |key|
-        if key["id"] == params[:id].to_i
-          @title = key["title"]
-          @image = key["image"]
-        end
-      end
+     resp
 
 
   end
