@@ -5,17 +5,24 @@
 
 <%= image_tag(@image, :alt => "recipe picture", size: '200x200') %> 
 <br>
-<%= raw @resp.body["instructions"] %>
+
+<%= raw @recipe.instructions %>
+
 
 
 <ul>
-<% @resp.body["extendedIngredients"].each do |key| %>
-	<li><%=	key["originalString"] %></li>
+<% @extended_ing.each do |key| %>
+	<li><%=	key.original_string %></li>
 <% end %>
 </ul>
+
+
+
+
+
 <br>
 
-<%= @resp.body["vegetarian"] %>
+<%= @recipe.vegetarian %>
 
 <br>
 
