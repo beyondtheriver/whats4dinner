@@ -1,6 +1,22 @@
+#whole_page_wrapper{
+   font-family: 'Roboto Condensed', sans-serif;
+   padding-left: 40px;
+   display: -webkit-box;
+}
 #recipe_wrapper{
    font-family: 'Roboto Condensed', sans-serif;
    padding-left: 40px;
+   a:link{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:visited{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:hover{
+      color: hotpink;
+   }
 }
 #add_more_button{
    border: none;
@@ -47,4 +63,3 @@
    width: 25%;
    height: 25%;
 }
-
