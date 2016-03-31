@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
 
 
   def show
-    
+
     ingredientssearch = params[:ingredients].join(",")
 
   #first call to API get a list of recipes we need to display
@@ -28,16 +28,16 @@ class RecipesController < ApplicationController
     @cookiesstring = cookies[:list_of_recipes]
     @cookievalue = JSON.parse(@cookiesstring)
 
-   
-    
-   @recipe = Recipe.find(params[:id])
-    
-    
-    
+
+
+   # @recipe = Recipe.find(params[:id])
+
+
+
   end
 
   def individual_recipe
-   
+
      @resp = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + params[:id].to_s + "/information?includeNutrition=false",
      headers:{
      "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa"
@@ -50,7 +50,7 @@ class RecipesController < ApplicationController
           @image = key["image"]
         end
       end
-   
+
 
   end
 
@@ -59,7 +59,7 @@ private
   def recipe_params
     params.require(:recipe).permit(:api_id, :title, :image, :vegetarian, :vegan, :gluten_free, :dairy_free, :instructions)
   end
- 
 
-  
+
+
 end
