@@ -20,8 +20,8 @@ class ProfilesController < ApplicationController
 
   def update
     user = current_user
-    if user.profile.update(params[:profile])
-      redirect_to user_path(user), notice: "Profile updated."
+    if user.profile.update(profile_params)
+      redirect_to profile_path(current_user), notice: "Profile updated."
     else
       render :new, alert: "There was a problem."
     end
