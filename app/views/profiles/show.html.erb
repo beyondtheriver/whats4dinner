@@ -7,4 +7,4 @@
 
 <%= link_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
 
-<%= link_to "Delete My Account", cancel_registration_path(current_user), :data => { :confirm => "Are you sure?" }, :method => :delete %>
+<p>Unhappy? <%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete %></p>
