@@ -15,9 +15,9 @@ class RecipesController < ApplicationController
 
 
   def show
-    
-     ingredientssearch = params[:ingredients].join(",")
-     
+
+    ingredientssearch = params[:ingredients].join(",")
+
 
      cookies[:list_of_recipes] = new_API_first_call(ingredientssearch)
    
@@ -72,6 +72,7 @@ class RecipesController < ApplicationController
      "Accept" => "application/json"
     }
 
+
     JSON.generate(@response.body)
   end
 
@@ -82,6 +83,7 @@ class RecipesController < ApplicationController
      }
      resp
 
+
   end
 
 private
@@ -89,7 +91,7 @@ private
   def recipe_params
     params.require(:recipe).permit(:api_id, :title, :image, :vegetarian, :vegan, :gluten_free, :dairy_free, :instructions)
   end
- 
 
-  
+
+
 end

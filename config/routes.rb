@@ -7,11 +7,12 @@ devise_scope :user do
 end
 
 
+  match 'users/:id' => 'devise/registrations#destroy', :via => :delete, :as => 'cancel_registration'
 
   get 'recipes/individual_recipe/:id' => 'recipes#individual_recipe'
 
   get '/recipes/show' => 'recipes#show'
-  
+
   post 'ingredient_search' => 'recipes#show'
 
 
