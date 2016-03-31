@@ -1,6 +1,6 @@
 <div id="ingredForm">
 
-   <%= form_tag('/ingredient_search', :id => 'searchForm') do %>
+   <%= form_tag('/ingredient_search', :id => 'searchForm', remote: true) do %>
       <%= label_tag(:ingredients, "What Ingredients Do You Have?") %><br>
       <%= text_field_tag('ingredients[]') %>
    <button id="add_more_button" class="add_field_button">Add More Ingredients</button>

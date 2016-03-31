@@ -15,14 +15,20 @@ end
 
   post 'ingredient_search' => 'recipes#show'
 
+  post 'favorite_recipe' => 'recipes#favorite'
 
-  get 'recipes/index'
+  # post 'recipes/indvidual_recipe/:id/favorite' => 'recipes#favorite'
 
-  get 'static_pages/home'
 
-  get 'static_pages/contact'
+  get '/recipes' => 'recipes#index'
+
+  # get 'static_pages/home'
+
+  # get 'static_pages/contact'
 
   root 'static_pages#home'
+
+  # put '/favorite_recipe' => 'recipes/individual_recipe'
 
 
   resources :profiles

@@ -1,3 +1,4 @@
+
 <%= @title  %>
 
 <br>
@@ -14,6 +15,9 @@
 	<li><%=	key.original_string %></li>
 <% end %>
 </ul>
+
+
+
 
 
 <br>
@@ -48,5 +52,8 @@ Dairy Free:
 <br>
 
 <br>
-
+<%= form_tag('/favorite_recipe', :id => 'favoriteForm', remote: true) do %>
+    <%= hidden_field_tag 'recipe_id', @recipe.id %>
+      <%= submit_tag "Add this Recipe to my Favorites!", id: "favorite_submit" %>
+   <% end %>
 
