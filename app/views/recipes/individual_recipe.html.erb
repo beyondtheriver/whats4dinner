@@ -1,53 +1,48 @@
-
-<%= @title  %>
-
-<br>
-
-<%= image_tag(@image, :alt => "recipe picture", size: '200x200') %>
-<br>
-
-<%= raw @recipe.instructions %>
-
-
-
-<ul>
-<% @extended_ing.each do |key| %>
-	<li><%=	key.original_string %></li>
-<% end %>
-</ul>
-
-
-<br>
-
-Vegetarian:
-     <% if @resp.body["vegetarian"] === true %>
-     <%= "Yes" %>
-     <% else %>
-     <%= "No" %>
-      <%  end %>
-<br>
-Vegan:
-     <% if @resp.body["vegan"] === true %>
-     <%= "Yes" %>
-     <% else %>
-     <%= "No" %>
-      <%  end %>
-<br>
-Gluten Free:
-     <% if @resp.body["glutenFree"] === true %>
-     <%= "Yes" %>
-     <% else %>
-     <%= "No" %>
-      <%  end %>
-<br>
-Dairy Free:
-     <% if @resp.body["dairyFree"] === true %>
-     <%= "Yes" %>
-     <% else %>
-     <%= "No" %>
-      <%  end %>
-<br>
-
-<br>
-
-
+<div id="banner">
+  <h2><%= link_to "What's 4 Dinner", root_path %></h2>
+</div>
+<div id="recipe_wrapper">
+    <div id="recipe_title">
+        <%= @title  %>
+    </div>
+    <br>
+    <div id="pic_and_ing">
+        <%= image_tag(@image, :alt => "recipe picture", :id => "recipe_picture") %>
+        <ul>
+            <% @extended_ing.each do |key| %>
+                <li><%= key.original_string %></li>
+            <% end %>
+        </ul>
+    </div>
+    <%= raw @recipe.instructions %>
+    <br>
+    Vegetarian:
+         <% if @resp.body["vegetarian"] === true %>
+         <%= "Yes" %>
+         <% else %>
+         <%= "No" %>
+          <%  end %>
+    <br>
+    Vegan:
+         <% if @resp.body["vegan"] === true %>
+         <%= "Yes" %>
+         <% else %>
+         <%= "No" %>
+          <%  end %>
+    <br>
+    Gluten Free:
+         <% if @resp.body["glutenFree"] === true %>
+         <%= "Yes" %>
+         <% else %>
+         <%= "No" %>
+          <%  end %>
+    <br>
+    Dairy Free:
+         <% if @resp.body["dairyFree"] === true %>
+         <%= "Yes" %>
+         <% else %>
+         <%= "No" %>
+          <%  end %>
+    <br>
+    <br>
+</div>
