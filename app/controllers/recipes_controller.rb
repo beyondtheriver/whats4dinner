@@ -1,11 +1,10 @@
 require 'unirest'
 class RecipesController < ApplicationController
 
-
   def index
     if current_user
       @profile = current_user.profile
-    else 
+    else
     end
 
   end
@@ -22,12 +21,11 @@ class RecipesController < ApplicationController
 
     ingredientssearch = params[:ingredients].join(",")
 
-
      cookies[:list_of_recipes] = new_API_first_call(ingredientssearch)
-   
-    
+
     # @recipe = Recipe.find(params[:id])
-    
+
+
     # render partial: 'recipes/show'
 
     respond_to do |format|
@@ -38,7 +36,7 @@ class RecipesController < ApplicationController
   def individual_recipe
     # the params[:id] here is actually the API id 6 digit
     if (Recipe.where("api_id = ?", params[:id]) == true)
-      
+
 
       @recipe = Recipe.where(api_id: params[:id]).take
       @image = @recipe.image
@@ -49,7 +47,7 @@ class RecipesController < ApplicationController
 
       @resp = second_API_call_one_recipe(params[:id].to_s)
        @cookievalue = JSON.parse(cookies[:list_of_recipes])
-       
+
        @cookievalue.each do |key|
           if key["id"] == params[:id].to_i
             @id = key["id"]
@@ -57,25 +55,26 @@ class RecipesController < ApplicationController
             @image = key["image"]
           end
         end
-       
+
         @recipe = Recipe.create(:api_id => @id, :title => @title, :image => @image, :vegetarian => @resp.body['vegetarian'], :vegan => @resp.body['vegan'], :gluten_free => @resp.body['glutenFree'], :dairy_free => @resp.body['dairyFree'], :instructions => @resp.body['instructions'])
 
         @extended_ing = []
         @resp.body["extendedIngredients"].each do |key|
-           x = ExtendedIngredient.create(:original_string =>  key["originalString"] , :name => key["name"], :recipe_id => @recipe.id)      
+           x = ExtendedIngredient.create(:original_string =>  key["originalString"] , :name => key["name"], :recipe_id => @recipe.id)
            @extended_ing.push(x)
+
            @ingredient = Ingredient.create(:name => key["name"])
            RecipeIngredient.create(recipe_id: @recipe.id, ingredient_id: @ingredient.id)
-         end 
+         end
 
          #favorite recipe
-         
+
 
 
     end
 
 
-      
+
   end
 
   def favorite
@@ -111,7 +110,7 @@ class RecipesController < ApplicationController
 
   end
 
-  
+
 
 private
 
