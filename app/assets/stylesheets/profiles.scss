@@ -41,7 +41,7 @@ body{
       font-family: 'Pacifico', cursive;
       font-size: 3em;
    }
-   #form_button{
+   .form_button{
       border: none;
       border-radius: 10%;
       margin-top: 10px;
@@ -63,4 +63,8 @@ body{
          color: hotpink;
       }
    }
+}
+#profile_wrapper{
+   font-family: 'Roboto Condensed', sans-serif;
+   padding-left: 40px;
 }
