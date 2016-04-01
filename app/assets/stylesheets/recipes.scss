@@ -90,3 +90,23 @@
    float: left;
    padding-left: 20px;
 }
+.fav_recipes{
+   a:link{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:visited{
+      text-decoration: none;
+      color: #4218e6;
+   }
+   a:hover{
+      color: hotpink;
+   }
+}
+.fav_button{
+   border: none;
+   cursor: pointer;
+   font-family: 'Roboto Condensed', sans-serif;
+   color: white;
+   background-color: #b50000;
+}
