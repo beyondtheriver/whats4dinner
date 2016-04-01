@@ -5,6 +5,8 @@
   <h2><%= profile.f_name %>'s Recipes</h2>
 <%# Insert links to recipes here -%>
 
-<%= link_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
+<%= button_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
 
 <%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete %>
+
+
