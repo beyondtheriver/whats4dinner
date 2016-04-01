@@ -6,6 +6,8 @@ devise_scope :user do
     get '/users/auth/:provider/callback' => 'omniauth_callbacks#test'
 end
 
+resources :profiles
+
 
   delete 'users/:id/delete' => 'users#destroy'
 
@@ -32,5 +34,4 @@ end
   # put '/favorite_recipe' => 'recipes/individual_recipe'
 
 
-  resources :profiles
 end

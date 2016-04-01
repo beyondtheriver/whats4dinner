@@ -11,7 +11,9 @@
   </ol>
 <%# Insert links to recipes here -%>
 
-<%= link_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
+<%= button_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
 
-<p>Unhappy? <%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete %></p>
-<div id="favorites"></div>
+<%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete %>
+
+
+
