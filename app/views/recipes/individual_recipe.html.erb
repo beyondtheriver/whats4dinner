@@ -51,6 +51,8 @@
               <%  end %>
     </div>
 <br>
+  <%= image_tag "twitter_small.png" %>
+  <a id="twitter_intent" href="https://twitter.com/intent/tweet?via=whats4dinner&text=I%20LOVE%20THIS%20RECIPE%21%20USE%20WHAT%27S%204%20DINNER%21&hashtags=whats4dinner&">I LOVE THIS RECIPE!</a>
  <div id="follow_form">
   <%if UserRecipe.where(user_id: current_user.id, recipe_id: @recipe.id).first%>
       <%= form_tag('/unfavorite_recipe', :id => 'unfavoriteForm', remote: true) do %>
