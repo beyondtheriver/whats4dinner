@@ -16,4 +16,8 @@
 
   <h2><%= @profile.f_name %>'s Recipes</h2>
 
+<ol>
+  <% @profile.user.recipes.each do |recipe| %>
+      <li> <%= link_to recipe.title, "/recipes/individual_recipe/#{recipe.api_id}" %></li>  <% end %>
+  </ol>
 </div>

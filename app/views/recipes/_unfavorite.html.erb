@@ -1,0 +1,6 @@
+<%= form_for(current_user.user_recipes.find_by(@recipe.id),
+             html: { method: :delete },
+             remote: true) do |f| %>
+             <%= hidden_field_tag 'recipe_id', @recipe.id %>
+  <%= f.submit "Unfavorite", class: "btn" %>
+<% end %>
