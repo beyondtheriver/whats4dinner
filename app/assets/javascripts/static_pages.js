@@ -1,4 +1,5 @@
-window.onload = function(){
+// window.onload = function(){
+$(document).ready(function() {
    // Get the modal
    var modal = $('.modal_features');
    // Get the button that opens the modal
@@ -25,4 +26,4 @@ window.onload = function(){
    //       modal.css("display", "none");
    //    }
    // }
-};
+});

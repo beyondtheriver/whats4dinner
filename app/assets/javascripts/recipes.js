@@ -2,9 +2,9 @@ $(document).ready(function() {
     var max_fields      = 4;
     var wrapper         = $("#searchForm");
     var add_button      = $(".add_field_button");
-
     var x = 1;
-    $(add_button).click(function(e){
+
+      $(add_button).click(function(e){
         e.preventDefault();
         if(x < max_fields){
             x++;
