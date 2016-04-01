@@ -3,9 +3,14 @@
    padding-left: 40px;
    display: -webkit-box;
 }
+#profile_partial{
+   background-color: #20603c;
+   padding: 40px;
+   color: white;
+}
 #recipe_wrapper{
    font-family: 'Roboto Condensed', sans-serif;
-   padding-left: 40px;
+   padding: 15px;
    a:link{
       text-decoration: none;
       color: #4218e6;

@@ -5,7 +5,7 @@ body{
    background-color: #add8e6;
 }
 #banner{
-   background-color: #4218e6;
+   background-color: #ff8c00;
    font-family: 'Pacifico', cursive;
    color: white;
    width: 102%;
@@ -116,3 +116,14 @@ body{
       color: white;
    }
 }
+.form_button{
+      border: none;
+      border-radius: 10%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: #ff8c00;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: .8em;
+      cursor: pointer;
+   }
