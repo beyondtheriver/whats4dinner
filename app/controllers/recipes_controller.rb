@@ -81,7 +81,7 @@ class RecipesController < ApplicationController
   def favorite
 
       @user = current_user
-      @recipe = Recipe.where(recipe_id: params[:id]).first
+      # @recipe = Recipe.where(recipe_id: params[:id]).first
       @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
 
     # render nothing: true
