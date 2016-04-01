@@ -60,6 +60,7 @@
 }
 #recipe_title{
    font-size: 2em;
+   padding-left: 10%;
 }
 #pic_and_ing{
    display: flex;
@@ -67,4 +68,30 @@
 #recipe_picture{
    width: 25%;
    height: 25%;
+   font-family: 'Pacifico', cursive;
+   padding-left: 15%;
+   padding-right: 10%;
+   padding-top: 20px;
+}
+#pic_and_ing{
+   font-size: 1.3em;
+  
+   background-color: #f0f9fa;
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#recipe_instructions{
+   font-size: 1.3em;
+   margin-top: 8%;
+   padding: 20px 10px 20px 35px;
+   background-color: #f0f9fa;
+   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+#diet_details{
+   width: 110px;
+   padding: 10px 5px 10px 10px;
+   background-color: #f0f9fa;
+}
+.searchlink{
+   padding-right: 40px;
 }
