@@ -8,17 +8,8 @@
   <ol>
   <% @profile.user.recipes.each do |recipe| %>
     <li> <%= link_to recipe.title, "/recipes/individual_recipe/#{recipe.api_id}" %></li>
-  <% end %>                        
+  <% end %>
   </ol>
 <%# Insert links to recipes here -%>
 
-<<<<<<< HEAD
-<p>Unhappy? <%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete, :class => "form_button" %></p>
-=======
-<%= button_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
-
 <%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete %>
-
-
-
->>>>>>> eb067df76e285bba8879200c3aa0131d70f00401
