@@ -12,4 +12,4 @@
   </ol>
 <%# Insert links to recipes here -%>
 
-<%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete %>
+<%= button_to "Cancel my account", "/users/#{current_user.id}/delete", method: :delete, :class => "form_button" %>
