@@ -16,6 +16,7 @@ end
   post 'ingredient_search' => 'recipes#show'
 
   post 'favorite_recipe' => 'recipes#favorite'
+  post 'unfavorite_recipe' => 'recipes#unfavorite'
 
   # post 'recipes/indvidual_recipe/:id/favorite' => 'recipes#favorite'
 

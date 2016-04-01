@@ -78,7 +78,9 @@ class RecipesController < ApplicationController
   end
 
   def favorite
-    @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
+
+
+       @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
 
     # render nothing: true
 
@@ -87,6 +89,14 @@ class RecipesController < ApplicationController
     end
   end
 
+  def unfavorite
+     @userrecipe = UserRecipe.find_by(recipe_id: params[:recipe_id]).destroy
+
+     respond_to do |format|
+        format.js
+     end
+
+  end
 
   def new_API_first_call(ingredientssearch)
    #first call to API get a list of recipes we need to display
