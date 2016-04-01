@@ -80,8 +80,9 @@ class RecipesController < ApplicationController
 
   def favorite
 
-
-       @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
+      @user = current_user
+      @recipe = Recipe.where(recipe_id: params[:id]).first
+      @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
 
     # render nothing: true
 
@@ -91,7 +92,14 @@ class RecipesController < ApplicationController
   end
 
   def unfavorite
-     @userrecipe = UserRecipe.find_by(recipe_id: params[:recipe_id]).destroy
+    @user = current_user
+    @recipe = Recipe.where(recipe_id: params[:id]).first
+
+    @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
+
+    if @userrecipe.destroy
+
+    end
 
      respond_to do |format|
         format.js
