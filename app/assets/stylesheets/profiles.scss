@@ -28,6 +28,22 @@ body{
       }
    }
 }
+#flashes{
+      position: absolute;
+      top: 25px;
+      color: white;
+      font-family: sans-serif;
+      margin-left: 40px;
+      a:link{
+         color: white;
+      }
+      a:visited{
+         color: white;
+      }
+      a:hover{
+         color: hotpink;
+      }
+}
 #come_in_form{
    width: 31%;
    margin: auto;
