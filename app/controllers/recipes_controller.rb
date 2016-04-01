@@ -36,13 +36,14 @@ class RecipesController < ApplicationController
 
   def individual_recipe
     # the params[:id] here is actually the API id 6 digit
-    if (Recipe.where("api_id = ?", params[:id]) == true)
+
+    if (Recipe.where("api_id = ?", params[:id]).first)
 
 
       @recipe = Recipe.where(api_id: params[:id]).take
       @image = @recipe.image
       @title = @recipe.title
-      @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id).take
+      @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id)
 
     else
 
@@ -69,6 +70,7 @@ class RecipesController < ApplicationController
          end
 
          #favorite recipe
+         @favorited = UserRecipe.find_by(user_id: current_user.id, recipe_id: @recipe.id).present?
 
 
 
@@ -79,8 +81,9 @@ class RecipesController < ApplicationController
   end
 
   def favorite
-
+     @recipe = Recipe.where(id: params[:recipe_id]).first
       @user = current_user
+
       # @recipe = Recipe.where(recipe_id: params[:id]).first
       @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
 
@@ -93,12 +96,12 @@ class RecipesController < ApplicationController
 
   def unfavorite
     @user = current_user
-    @recipe = Recipe.where(recipe_id: params[:id]).first
+    @recipe = Recipe.where(id: params[:recipe_id]).first
 
-    @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
+    @userrecipe = UserRecipe.where(user_id: current_user.id, recipe_id: params[:recipe_id]).first
 
-    if @userrecipe.destroy
-
+    if @userrecipe
+        @userrecipe.destroy
     end
 
      respond_to do |format|
