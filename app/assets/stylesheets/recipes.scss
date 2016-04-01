@@ -25,11 +25,13 @@
 }
 #add_more_button{
    border: none;
+   cursor: pointer;
    font-family: 'Roboto Condensed', sans-serif;
    background-color: #ff8c00;
 }
 #ingredient_search{
    border: none;
+   cursor: pointer;
    font-family: 'Roboto Condensed', sans-serif;
    color: white;
    background-color: #b50000;
@@ -41,9 +43,7 @@
 .response_item{
    width: 200px;
    height: 200px;
-   margin-right: 25px;
-   margin-left: 25px;
-   margin-bottom: 75px;
+   margin: 20px 20px 75px 20px;
    font-family: 'Roboto Condensed', sans-serif;
    text-align: center;
       a:link{
@@ -64,28 +64,22 @@
 }
 #pic_and_ing{
    display: flex;
+   font-size: 1em;
+   background-color: #f0f9fa;
+   font-family: 'Roboto Condensed', sans-serif;
 }
 #recipe_picture{
    width: 25%;
    height: 25%;
    font-family: 'Pacifico', cursive;
-   padding-left: 15%;
-   padding-right: 10%;
-   padding-top: 20px;
-}
-#pic_and_ing{
-   font-size: 1.3em;
-  
-   background-color: #f0f9fa;
-   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   padding: 20px 10% 20px 15%;
 }
 #recipe_instructions{
-   font-size: 1.3em;
-   margin-top: 8%;
-   padding: 20px 10px 20px 35px;
+   font-size: 1.2em;
+   margin-top: 30px;
+   padding: 20px 20px 20px 35px;
    background-color: #f0f9fa;
-   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+   font-family: 'Roboto Condensed', sans-serif;
 }
 #diet_details{
    width: 110px;

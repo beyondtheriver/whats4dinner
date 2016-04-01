@@ -2,7 +2,7 @@
 <div id="banner">
   <h2><%= link_to "Search Another Recipe", recipes_path, class: "searchlink" %><%= link_to "What's 4 Dinner", root_path %>
    </h2>
-      
+
 </div>
 <div id="recipe_wrapper">
     <div id="recipe_title">
@@ -51,17 +51,19 @@
               <%  end %>
     </div>
 <br>
+  <%= image_tag "twitter_small.png" %>
+  <a id="twitter_intent" href="https://twitter.com/intent/tweet?via=whats4dinner&text=I%20LOVE%20THIS%20RECIPE%21%20USE%20WHAT%27S%204%20DINNER%21&hashtags=whats4dinner&">I LOVE THIS RECIPE!</a>
  <div id="follow_form">
-  <%if UserRecipe.where(user_id: current_user.id, recipe_id: @recipe.id)%>
+  <%if UserRecipe.where(user_id: current_user.id, recipe_id: @recipe.id).first%>
       <%= form_tag('/unfavorite_recipe', :id => 'unfavoriteForm', remote: true) do %>
-          <%= hidden_field_tag 'recipe_id', @recipe.id %>
+        <%= hidden_field_tag 'recipe_id', @recipe.id %>
         <%= submit_tag "Remove this Recipe from my Favorites!", id: "unfavorite_submit" %>
-        <% end %>
+      <% end %>
   <%else%>
-       <%= form_tag('/favorite_recipe', :id => 'favoriteForm', remote: true) do %>
-      <%= hidden_field_tag 'recipe_id', @recipe.id %>
+      <%= form_tag('/favorite_recipe', :id => 'favoriteForm', remote: true) do %>
+        <%= hidden_field_tag 'recipe_id', @recipe.id %>
         <%= submit_tag "Add this Recipe to my Favorites!", id: "favorite_submit" %>
-     <% end %>
+      <% end %>
   <% end %>
   </div>
 
