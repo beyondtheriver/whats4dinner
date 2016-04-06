@@ -39,25 +39,17 @@ class RecipesController < ApplicationController
       @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id)
 
     else
+    
+        @recipe = building_recipe
+      
 
-      @resp = second_API_call_one_recipe(params[:id].to_s)
-       @cookievalue = JSON.parse(cookies[:list_of_recipes])
-
-       @cookievalue.each do |key|
-          if key["id"] == params[:id].to_i
-            @id = key["id"]
-            @title = key["title"]
-            @image = key["image"]
-            @missedIng = key['missedIngredientCount']
-            @includedIng = key['usedIngredientCount']
-          end
-        end
-
-        @recipe = Recipe.create(:api_id => @id, :title => @title, :image => @image, :vegetarian => @resp.body['vegetarian'], :vegan => @resp.body['vegan'], :gluten_free => @resp.body['glutenFree'], :dairy_free => @resp.body['dairyFree'], :instructions => @resp.body['instructions'], :usedIngredientCount => @includedIng, :missedIngredientCount => @missedIng, :readyInMinutes => @resp.body['readyInMinutes'])
-
+        
+         @resp = second_API_call_one_recipe(params[:id].to_s)
+        
         @extended_ing = []
         @resp.body["extendedIngredients"].each do |key|
            x = ExtendedIngredient.create(:original_string =>  key["originalString"] , :name => key["name"], :recipe_id => @recipe.id)
+          
            @extended_ing.push(x)
 
            @ingredient = Ingredient.create(:name => key["name"])
