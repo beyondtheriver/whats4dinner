@@ -7,7 +7,7 @@
 
   <ol>
   <% @profile.user.recipes.each do |recipe| %>
-    <li> <%= link_to recipe.title, "/recipes/individual_recipe/#{recipe.api_id}" %></li>
+    <li class= "fav_recipes"> <%= link_to recipe.title, "/recipes/individual_recipe/#{recipe.api_id}" %></li>
   <% end %>
   </ol>
 <%# Insert links to recipes here -%>
