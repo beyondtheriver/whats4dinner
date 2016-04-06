@@ -1,5 +1,6 @@
 require 'unirest'
 class RecipesController < ApplicationController
+  include RecipeLogic
 
   def index
     if current_user
@@ -10,7 +11,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    # @recipe = Recipe.create(recipe_params)
+   
   end
 
   def destroy
@@ -23,11 +24,6 @@ class RecipesController < ApplicationController
 
      cookies[:list_of_recipes] = new_API_first_call(ingredientssearch)
 
-    # @recipe = Recipe.find(params[:id])
-
-
-    # render partial: 'recipes/show'
-
     respond_to do |format|
       format.js
       format.html
@@ -39,10 +35,7 @@ class RecipesController < ApplicationController
     
     if (Recipe.where("api_id = ?", params[:id]).first)
 
-
       @recipe = Recipe.where(api_id: params[:id]).take
-      @image = @recipe.image
-      @title = @recipe.title
       @extended_ing = ExtendedIngredient.where(:recipe_id => @recipe.id)
 
     else
@@ -55,10 +48,12 @@ class RecipesController < ApplicationController
             @id = key["id"]
             @title = key["title"]
             @image = key["image"]
+            @missedIng = key['missedIngredientCount']
+            @includedIng = key['usedIngredientCount']
           end
         end
 
-        @recipe = Recipe.create(:api_id => @id, :title => @title, :image => @image, :vegetarian => @resp.body['vegetarian'], :vegan => @resp.body['vegan'], :gluten_free => @resp.body['glutenFree'], :dairy_free => @resp.body['dairyFree'], :instructions => @resp.body['instructions'])
+        @recipe = Recipe.create(:api_id => @id, :title => @title, :image => @image, :vegetarian => @resp.body['vegetarian'], :vegan => @resp.body['vegan'], :gluten_free => @resp.body['glutenFree'], :dairy_free => @resp.body['dairyFree'], :instructions => @resp.body['instructions'], :usedIngredientCount => @includedIng, :missedIngredientCount => @missedIng, :readyInMinutes => @resp.body['readyInMinutes'])
 
         @extended_ing = []
         @resp.body["extendedIngredients"].each do |key|
@@ -108,37 +103,5 @@ class RecipesController < ApplicationController
      end
 
   end
-
-  def new_API_first_call(ingredientssearch)
-   #first call to API get a list of recipes we need to display
-   @response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients="+ ingredientssearch +"&limitLicense=true&number=12&ranking=1",
-    headers:{
-     "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa",
-     "Accept" => "application/json"
-    }
-
-
-    JSON.generate(@response.body)
-  end
-
-  def second_API_call_one_recipe(id)
-    resp = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + id + "/information?includeNutrition=false",
-     headers:{
-     "X-Mashape-Key" => "PRyzsssDGXmshrmnhnFD9DSY98YUp1ORXtjjsnlRaiF6hxwMKa"
-     }
-     resp
-
-
-  end
-
-
-
-private
-
-  def recipe_params
-    params.require(:recipe).permit(:api_id, :title, :image, :vegetarian, :vegan, :gluten_free, :dairy_free, :instructions)
-  end
-
-
 
 end
