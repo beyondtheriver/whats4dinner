@@ -32,7 +32,7 @@ class RecipesController < ApplicationController
 
   def individual_recipe
     # the params[:id] here is actually the API id 6 digit
-    
+
     if (Recipe.where("api_id = ?", params[:id]).first)
 
       @recipe = Recipe.where(api_id: params[:id]).take
@@ -70,9 +70,10 @@ class RecipesController < ApplicationController
   def favorite
      @recipe = Recipe.where(id: params[:recipe_id]).first
       @user = current_user
-     # if @user.recipes.first == Recipe.where(recipe_id: params[:recipe_id])
-       @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
-     # end 
+
+      # @recipe = Recipe.where(recipe_id: params[:id]).first
+      @userrecipe = UserRecipe.create(user_id: current_user.id, recipe_id: params[:recipe_id])
+
     # render nothing: true
 
     respond_to do |format|
