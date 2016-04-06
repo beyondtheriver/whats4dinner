@@ -1,51 +1,19 @@
-#whole_page_wrapper{
-   font-family: 'Roboto Condensed', sans-serif;
-   padding-left: 40px;
-   display: -webkit-box;
-}
-#profile_partial{
-   background-color: #20603c;
-   padding: 40px;
-   color: white;
-}
-#recipe_wrapper{
-   font-family: 'Roboto Condensed', sans-serif;
-   padding: 15px;
-   a:link{
-      text-decoration: none;
-      color: #4218e6;
+/* Mobile first - tested with iPhone6 */
+
+   #whole_page_wrapper{
+      font-family: 'Roboto Condensed', sans-serif;
+      padding-left: 8%;
+      padding-right: 8%;
+      display: block;
    }
-   a:visited{
-      text-decoration: none;
-      color: #4218e6;
+   #profile_partial{
+      background-color: #20603c;
+      padding: 40px;
+      color: white;
    }
-   a:hover{
-      color: hotpink;
-   }
-}
-#add_more_button{
-   border: none;
-   cursor: pointer;
-   font-family: 'Roboto Condensed', sans-serif;
-   background-color: #ff8c00;
-}
-#ingredient_search{
-   border: none;
-   cursor: pointer;
-   font-family: 'Roboto Condensed', sans-serif;
-   color: white;
-   background-color: #b50000;
-}
-#recipe_responses{
-   display: flex;
-   flex-wrap: wrap;
-}
-.response_item{
-   width: 200px;
-   height: 200px;
-   margin: 20px 20px 75px 20px;
-   font-family: 'Roboto Condensed', sans-serif;
-   text-align: center;
+   #recipe_wrapper{
+      font-family: 'Roboto Condensed', sans-serif;
+      padding: 15px;
       a:link{
          text-decoration: none;
          color: #4218e6;
@@ -57,56 +25,326 @@
       a:hover{
          color: hotpink;
       }
-}
-#recipe_title{
-   font-size: 2em;
-   padding-left: 10%;
-}
-#pic_and_ing{
-   display: flex;
-   font-size: 1em;
-   background-color: #f0f9fa;
-   font-family: 'Roboto Condensed', sans-serif;
-}
-#recipe_picture{
-   width: 25%;
-   height: 25%;
-   font-family: 'Pacifico', cursive;
-   padding: 20px 10% 20px 15%;
-}
-#recipe_instructions{
-   font-size: 1.2em;
-   margin-top: 30px;
-   padding: 20px 20px 20px 35px;
-   background-color: #f0f9fa;
-   font-family: 'Roboto Condensed', sans-serif;
-}
-#diet_details{
-   width: 110px;
-   padding: 10px 5px 10px 10px;
-   background-color: #f0f9fa;
-}
-.searchlink{
-   float: left;
-   padding-left: 20px;
-}
-.fav_recipes{
-   a:link{
-      text-decoration: none;
-      color: #4218e6;
    }
-   a:visited{
-      text-decoration: none;
-      color: #4218e6;
+   #add_more_button{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #ff8c00;
    }
-   a:hover{
-      color: hotpink;
+   #ingredient_search{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      background-color: #b50000;
+   }
+   #recipe_responses{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .response_item{
+      width: 200px;
+      height: 200px;
+      margin: 20px 20px 75px 20px;
+      font-family: 'Roboto Condensed', sans-serif;
+      text-align: center;
+         a:link{
+            text-decoration: none;
+            color: #4218e6;
+         }
+         a:visited{
+            text-decoration: none;
+            color: #4218e6;
+         }
+         a:hover{
+            color: hotpink;
+         }
+   }
+   #recipe_title{
+      font-size: 2em;
+      padding-left: 10%;
+   }
+   #pic_and_ing{
+      display: flex;
+      font-size: 1em;
+      background-color: #f0f9fa;
+      font-family: 'Roboto Condensed', sans-serif;
+   }
+   #recipe_picture{
+      width: 25%;
+      height: 25%;
+      font-family: 'Pacifico', cursive;
+      padding: 20px 10% 20px 15%;
+   }
+   #recipe_instructions{
+      font-size: 1.2em;
+      margin-top: 30px;
+      padding: 20px 20px 20px 35px;
+      background-color: #f0f9fa;
+      font-family: 'Roboto Condensed', sans-serif;
+   }
+   #diet_details{
+      width: 110px;
+      padding: 10px 5px 10px 10px;
+      background-color: #f0f9fa;
+   }
+   .searchlink{
+      float: left;
+      padding-left: 20px;
+   }
+   .fav_recipes{
+      a:link{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:visited{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+   .fav_button{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      background-color: #b50000;
+   }
+
+/* for iPad */
+@media all and (min-width: 768px){
+
+   #whole_page_wrapper{
+      font-family: 'Roboto Condensed', sans-serif;
+      padding-left: 40px;
+      display: -webkit-box;
+   }
+   #profile_partial{
+      background-color: #20603c;
+      padding: 40px;
+      color: white;
+   }
+   #recipe_wrapper{
+      font-family: 'Roboto Condensed', sans-serif;
+      padding: 15px;
+      a:link{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:visited{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+   #add_more_button{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #ff8c00;
+   }
+   #ingredient_search{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      background-color: #b50000;
+   }
+   #recipe_responses{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .response_item{
+      width: 200px;
+      height: 200px;
+      margin: 20px 20px 75px 20px;
+      font-family: 'Roboto Condensed', sans-serif;
+      text-align: center;
+         a:link{
+            text-decoration: none;
+            color: #4218e6;
+         }
+         a:visited{
+            text-decoration: none;
+            color: #4218e6;
+         }
+         a:hover{
+            color: hotpink;
+         }
+   }
+   #recipe_title{
+      font-size: 2em;
+      padding-left: 10%;
+   }
+   #pic_and_ing{
+      display: flex;
+      font-size: 1em;
+      background-color: #f0f9fa;
+      font-family: 'Roboto Condensed', sans-serif;
+   }
+   #recipe_picture{
+      width: 25%;
+      height: 25%;
+      font-family: 'Pacifico', cursive;
+      padding: 20px 10% 20px 15%;
+   }
+   #recipe_instructions{
+      font-size: 1.2em;
+      margin-top: 30px;
+      padding: 20px 20px 20px 35px;
+      background-color: #f0f9fa;
+      font-family: 'Roboto Condensed', sans-serif;
+   }
+   #diet_details{
+      width: 110px;
+      padding: 10px 5px 10px 10px;
+      background-color: #f0f9fa;
+   }
+   .searchlink{
+      float: left;
+      padding-left: 20px;
+   }
+   .fav_recipes{
+      a:link{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:visited{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+   .fav_button{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      background-color: #b50000;
    }
 }
-.fav_button{
-   border: none;
-   cursor: pointer;
-   font-family: 'Roboto Condensed', sans-serif;
-   color: white;
-   background-color: #b50000;
+
+/* for Desktop */
+
+@media all and (min-width: 992px){
+
+   #whole_page_wrapper{
+      font-family: 'Roboto Condensed', sans-serif;
+      padding-left: 40px;
+      display: -webkit-box;
+   }
+   #profile_partial{
+      background-color: #20603c;
+      padding: 40px;
+      color: white;
+   }
+   #recipe_wrapper{
+      font-family: 'Roboto Condensed', sans-serif;
+      padding: 15px;
+      a:link{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:visited{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+   #add_more_button{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #ff8c00;
+   }
+   #ingredient_search{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      background-color: #b50000;
+   }
+   #recipe_responses{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .response_item{
+      width: 200px;
+      height: 200px;
+      margin: 20px 20px 75px 20px;
+      font-family: 'Roboto Condensed', sans-serif;
+      text-align: center;
+         a:link{
+            text-decoration: none;
+            color: #4218e6;
+         }
+         a:visited{
+            text-decoration: none;
+            color: #4218e6;
+         }
+         a:hover{
+            color: hotpink;
+         }
+   }
+   #recipe_title{
+      font-size: 2em;
+      padding-left: 10%;
+   }
+   #pic_and_ing{
+      display: flex;
+      font-size: 1em;
+      background-color: #f0f9fa;
+      font-family: 'Roboto Condensed', sans-serif;
+   }
+   #recipe_picture{
+      width: 25%;
+      height: 25%;
+      font-family: 'Pacifico', cursive;
+      padding: 20px 10% 20px 15%;
+   }
+   #recipe_instructions{
+      font-size: 1.2em;
+      margin-top: 30px;
+      padding: 20px 20px 20px 35px;
+      background-color: #f0f9fa;
+      font-family: 'Roboto Condensed', sans-serif;
+   }
+   #diet_details{
+      width: 110px;
+      padding: 10px 5px 10px 10px;
+      background-color: #f0f9fa;
+   }
+   .searchlink{
+      float: left;
+      padding-left: 20px;
+   }
+   .fav_recipes{
+      a:link{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:visited{
+         text-decoration: none;
+         color: #4218e6;
+      }
+      a:hover{
+         color: hotpink;
+      }
+   }
+   .fav_button{
+      border: none;
+      cursor: pointer;
+      font-family: 'Roboto Condensed', sans-serif;
+      color: white;
+      background-color: #b50000;
+   }
 }
