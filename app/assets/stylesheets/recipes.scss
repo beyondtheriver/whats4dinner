@@ -73,11 +73,13 @@
       background-color: #f0f9fa;
       font-family: 'Roboto Condensed', sans-serif;
    }
+
    #extra-info {
       padding-top: 1%;
       padding-left: 12%;
       float: left;
    }
+
    #recipe_picture{
       width: 25%;
       height: 25%;
@@ -139,6 +141,8 @@
       color: white;
       padding: 10%;
       max-width: 18%;
+      padding: 40px;
+      color: white;
    }
    #recipe_wrapper{
       font-family: 'Roboto Condensed', sans-serif;
@@ -244,6 +248,7 @@
          color: hotpink;
       }
    }
+
    #favorite_submit, #unfavorite_submit, .fav_button{
       border: none;
       cursor: pointer;
