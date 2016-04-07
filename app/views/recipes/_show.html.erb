@@ -1,11 +1,8 @@
-<div id="banner">
-  <h2><%= link_to "What's 4 Dinner", root_path %></h2>
-</div>
 <div id="recipe_responses">
    <% @response.body.each do |key| puts key %>
       <div class="response_item">
          <%= image_tag(key["image"], :alt => "recipe picture", size: '200x200') %>
-         <%= link_to key['title'], "recipes/individual_recipe/#{key['id']}" %>
+         <%= link_to key['title'], "/recipes/individual_recipe/#{key['id']}" %>
       </div>
       <br>
    <% end %>

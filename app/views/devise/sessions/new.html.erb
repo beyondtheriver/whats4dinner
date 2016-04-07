@@ -1,6 +1,7 @@
 <div id="banner">
   <h2><%= link_to "What's 4 Dinner", root_path %></h2>
 </div>
+</div>
 <div id="come_in_form">
   <h2>Log in</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -22,7 +23,7 @@
     <% end -%>
 
     <div class="actions">
-      <%= f.submit "Log in", id:"form_button" %>
+      <%= f.submit "Log in", :class => "form_button" %>
     </div>
   <% end %>
   <div id="devise_links">

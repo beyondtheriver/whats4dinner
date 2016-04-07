@@ -6,8 +6,10 @@ devise_scope :user do
     get '/users/auth/:provider/callback' => 'omniauth_callbacks#test'
 end
 
+resources :profiles
 
-  match 'users/:id' => 'devise/registrations#destroy', :via => :delete, :as => 'cancel_registration'
+
+  delete 'users/:id/delete' => 'users#destroy'
 
   get 'recipes/individual_recipe/:id' => 'recipes#individual_recipe'
 
@@ -15,15 +17,21 @@ end
 
   post 'ingredient_search' => 'recipes#show'
 
+  post 'favorite_recipe' => 'recipes#favorite'
+  post 'unfavorite_recipe' => 'recipes#unfavorite'
 
-  get 'recipes/index'
+  # post 'recipes/indvidual_recipe/:id/favorite' => 'recipes#favorite'
 
-  get 'static_pages/home'
 
-  get 'static_pages/contact'
+  get '/recipes' => 'recipes#index'
+
+  # get 'static_pages/home'
+
+  # get 'static_pages/contact'
 
   root 'static_pages#home'
 
+  # put '/favorite_recipe' => 'recipes/individual_recipe'
 
-  resources :profiles
+
 end

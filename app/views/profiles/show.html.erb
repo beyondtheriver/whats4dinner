@@ -1,10 +1,19 @@
-
+<div id="banner">
+  <h2><%= link_to "What's 4 Dinner", recipes_path %></h2>
+</div>
+<span id="flashes">
+  <%= link_to "Start Cooking", recipes_path %> <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+</span>
+<div id="profile_wrapper">
   <h2><%= @profile.f_name %>'s Profile</h2>
   <p>Name: <%= @profile.f_name %> <%= @profile.l_name %></p>
+     <%= button_to 'Edit Profile', edit_profile_path(current_user), method: :get, :class => "form_button" %>
+     <%= button_to "Cancel My Account", "/users/#{current_user.id}/delete", method: :delete, :class => "form_button" %>
 
   <h2><%= @profile.f_name %>'s Recipes</h2>
-<%# Insert links to recipes here -%>
 
-<%= link_to 'Edit Profile', edit_profile_path(current_user), method: :get %><br>
-
-<%= link_to "Delete My Account", cancel_registration_path(current_user), :data => { :confirm => "Are you sure?" }, :method => :delete %>
+<ol>
+  <% @profile.user.recipes.each do |recipe| %>
+      <li class= "fav_recipes"> <%= link_to recipe.title, "/recipes/individual_recipe/#{recipe.api_id}" %></li>  <% end %>
+  </ol>
+</div>

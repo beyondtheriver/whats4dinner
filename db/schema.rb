@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331011815) do
+ActiveRecord::Schema.define(version: 20160406131932) do
 
   create_table "extended_ingredients", force: :cascade do |t|
     t.text     "original_string"
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 20160331011815) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.integer  "api_id"
     t.string   "title"
     t.text     "image"
@@ -54,6 +54,9 @@ ActiveRecord::Schema.define(version: 20160331011815) do
     t.boolean  "gluten_free"
     t.boolean  "dairy_free"
     t.text     "instructions"
+    t.integer  "usedIngredientCount"
+    t.integer  "missedIngredientCount"
+    t.integer  "readyInMinutes"
   end
 
   create_table "user_recipes", force: :cascade do |t|
