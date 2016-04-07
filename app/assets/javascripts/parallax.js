@@ -14,7 +14,7 @@ $(document).ready(function(){
          $('#header_title h1').css("opacity", op );
          console.log("HERE: " + $(this).scrollTop())
       }else if ($(this).scrollTop() < 101){
-         $('#header_title h1').css("opacity", 1);
+         $('#header_title h1').css("opacity", 1).show();
       }else {
          $('#header_title h1').hide();
       };
