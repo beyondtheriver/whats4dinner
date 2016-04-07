@@ -1,9 +1,6 @@
 <div id="banner">
-  <h2><%= link_to "What's 4 Dinner", recipes_path %></h2>
+  <h2><%= link_to "Search Recipes", recipes_path, class: "searchlink" %><%= link_to "What's 4 Dinner", recipes_path %></h2>
 </div>
-<span id="flashes">
-  <%= link_to "Start Cooking", recipes_path %> <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-</span>
 <div id="profile_wrapper">
   <h2><%= @profile.f_name %>'s Profile</h2>
   <p>Name: <%= @profile.f_name %> <%= @profile.l_name %></p>
