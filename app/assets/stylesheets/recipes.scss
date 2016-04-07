@@ -8,7 +8,8 @@
    }
    #profile_partial{
       background-color: #20603c;
-      padding: 40px;
+      padding: 10%;
+      max-width: 80%;
       color: white;
    }
    #recipe_wrapper{
@@ -67,9 +68,15 @@
    }
    #pic_and_ing{
       display: flex;
+      flex-wrap: wrap;
       font-size: 1em;
       background-color: #f0f9fa;
       font-family: 'Roboto Condensed', sans-serif;
+   }
+   #extra-info {
+      padding-top: 1%;
+      padding-left: 12%;
+      float: left;
    }
    #recipe_picture{
       width: 25%;
@@ -93,6 +100,11 @@
       float: left;
       padding-left: 20px;
    }
+
+   #ingredient-list{
+   max-width: 290px
+   }
+
    .fav_recipes{
       a:link{
          text-decoration: none;
@@ -106,7 +118,7 @@
          color: hotpink;
       }
    }
-   .fav_button{
+   #favorite_submit, #unfavorite_submit, .fav_button{
       border: none;
       cursor: pointer;
       font-family: 'Roboto Condensed', sans-serif;
@@ -124,8 +136,9 @@
    }
    #profile_partial{
       background-color: #20603c;
-      padding: 40px;
       color: white;
+      padding: 10%;
+      max-width: 18%;
    }
    #recipe_wrapper{
       font-family: 'Roboto Condensed', sans-serif;
@@ -187,6 +200,10 @@
       background-color: #f0f9fa;
       font-family: 'Roboto Condensed', sans-serif;
    }
+   #extra-info {
+      padding-top: 2%;
+      padding-left: 2%;
+   }
    #recipe_picture{
       width: 25%;
       height: 25%;
@@ -209,6 +226,11 @@
       float: left;
       padding-left: 20px;
    }
+
+   #ingredient-list{
+   max-width: 290px
+   }
+
    .fav_recipes{
       a:link{
          text-decoration: none;
@@ -222,7 +244,7 @@
          color: hotpink;
       }
    }
-   .fav_button{
+   #favorite_submit, #unfavorite_submit, .fav_button{
       border: none;
       cursor: pointer;
       font-family: 'Roboto Condensed', sans-serif;
@@ -244,6 +266,7 @@
       background-color: #20603c;
       padding: 40px;
       color: white;
+      max-width: 16%;
    }
    #recipe_wrapper{
       font-family: 'Roboto Condensed', sans-serif;
@@ -276,6 +299,7 @@
    #recipe_responses{
       display: flex;
       flex-wrap: wrap;
+      max-width: 97%;
    }
    .response_item{
       width: 200px;
@@ -305,6 +329,10 @@
       background-color: #f0f9fa;
       font-family: 'Roboto Condensed', sans-serif;
    }
+   #extra-info {
+      padding-top: 1%;
+      padding-left: 2%;
+   }
    #recipe_picture{
       width: 25%;
       height: 25%;
@@ -327,6 +355,11 @@
       float: left;
       padding-left: 20px;
    }
+
+   #ingredient-list{
+   max-width: 290px
+   }
+
    .fav_recipes{
       a:link{
          text-decoration: none;
@@ -340,7 +373,7 @@
          color: hotpink;
       }
    }
-   .fav_button{
+   #favorite_submit, #unfavorite_submit, .fav_button{
       border: none;
       cursor: pointer;
       font-family: 'Roboto Condensed', sans-serif;

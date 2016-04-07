@@ -17,7 +17,7 @@
       }
       #button_style{
          font-family: 'Pacifico', cursive;
-         font-size: .8em;
+         font-size: 0.6rem;
          color: #e6cc22;
          width: 10%;
          height: 40px;
@@ -47,6 +47,16 @@
          top: 75px;
          right: 25px;
       }
+      .log_out{
+         position: absolute;
+         top: 30px;
+         right: 25px;
+      }
+      .cook{
+         position: absolute;
+         top: 30px;
+         right: 20%;
+      }
       .with_twitter{
          position: absolute;
          top: 22%;
@@ -54,7 +64,7 @@
          width: 10%;
          height: 50px;
          font-family: 'Pacifico', cursive;
-         font-size: .6em;
+         font-size: .6rem;
          background-color: #4099FF;
          color: white;
          border: none;
@@ -72,21 +82,31 @@
          }
 
       }
-      #flashes{
+      #welcome{
          position: absolute;
          top: 25px;
          color: white;
          font-family: sans-serif;
-         a:link{
-            color: white;
-         }
-         a:visited{
-            color: white;
-         }
-         a:hover{
-            color: hotpink;
-         }
+         font-size: 0.8rem;
       }
+      #top{
+         display: flex;
+         flex-wrap: wrap;
+      }
+      // #flashes{
+      //    margin-left: 80%;
+      //    top: 25px;
+      //    color: white;
+      //    a:link{
+      //       color: white;
+      //    }
+      //    a:visited{
+      //       color: white;
+      //    }
+      //    a:hover{
+      //       color: hotpink;
+      //    }
+      // }
       h1{
          font-family: 'Pacifico', cursive;
          position: absolute;
@@ -207,6 +227,16 @@
          top: 75px;
          right: 25px;
       }
+      .log_out{
+         position: absolute;
+         top: 30px;
+         right: 25px;
+      }
+      .cook{
+         position: absolute;
+         top: 30px;
+         right: 150px;
+      }
       .with_twitter{
          position: absolute;
          top: 22%;
@@ -232,21 +262,32 @@
          }
 
       }
-      #flashes{
+      #welcome{
          position: absolute;
          top: 25px;
          color: white;
          font-family: sans-serif;
-         a:link{
-            color: white;
-         }
-         a:visited{
-            color: white;
-         }
-         a:hover{
-            color: hotpink;
-         }
+         font-size: 1.1rem;
       }
+      #top{
+         display: flex;
+         flex-wrap: wrap;
+      }
+      // #flashes{
+      //    margin-left: 80%;
+      //    top: 25px;
+      //    color: white;
+      //    font-family: 'Pacifico', cursive;
+      //    a:link{
+      //       color: white;
+      //    }
+      //    a:visited{
+      //       color: white;
+      //    }
+      //    a:hover{
+      //       color: hotpink;
+      //    }
+      // }
       h1{
          font-family: 'Pacifico', cursive;
          position: absolute;
@@ -340,7 +381,7 @@
       }
       #button_style{
          font-family: 'Pacifico', cursive;
-         font-size: .8em;
+         font-size: 0.9rem;
          color: #e6cc22;
          width: 10%;
          height: 40px;
@@ -370,6 +411,16 @@
          top: 75px;
          right: 25px;
       }
+      .log_out{
+         position: absolute;
+         top: 30px;
+         right: 25px;
+      }
+      .cook{
+         position: absolute;
+         top: 30px;
+         right: 200px;
+      }
       .with_twitter{
          position: absolute;
          top: 400px;
@@ -377,7 +428,7 @@
          width: 10%;
          height: 50px;
          font-family: 'Pacifico', cursive;
-         font-size: .8em;
+         font-size: 0.8em;
          background-color: #4099FF;
          color: white;
          border: none;
@@ -395,21 +446,34 @@
          }
 
       }
-      #flashes{
+      #welcome{
          position: absolute;
          top: 25px;
          color: white;
          font-family: sans-serif;
-         a:link{
-            color: white;
-         }
-         a:visited{
-            color: white;
-         }
-         a:hover{
-            color: hotpink;
-         }
+         font-size: 1.1rem;
       }
+      #top{
+         display: flex;
+         flex-wrap: wrap;
+      }
+      // #flashes{
+      //    margin-left: 70%;
+      //    top: 25px;
+      //    color: white;
+      //    font-family: 'Pacifico', cursive;
+      //    font-size: 1.8rem;
+      //    a:link{
+      //       color: white;
+      //       text-decoration: none;
+      //    }
+      //    a:visited{
+      //       color: white;
+      //    }
+      //    a:hover{
+      //       color: hotpink;
+      //    }
+      // }
       h1{
          font-family: 'Pacifico', cursive;
          position: absolute;
