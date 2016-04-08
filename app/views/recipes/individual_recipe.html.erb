@@ -23,7 +23,9 @@
        </div>
 
     </div>
-    <%= image_tag "twitter_small.png" %>
+    <%= link_to 'https://twitter.com/intent/tweet?via=whats4dinner&text=I%27m%20hungry%2C%20but%20indecisive%21%20What%20should%20I%20eat%3F&hashtags=whats4dinner&' do %>
+         <%= image_tag "twitter_small.png", id: "twitter_bird"%>
+      <% end%>
                 <a id="twitter_intent" href="https://twitter.com/intent/tweet?via=whats4dinner&text=I%20LOVE%20THIS%20RECIPE%21%20USE%20WHAT%27S%204%20DINNER%21&hashtags=whats4dinner&">I LOVE THIS RECIPE!</a>
     <div id="follow_form">
             <br>
