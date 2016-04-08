@@ -288,11 +288,17 @@
          color: hotpink;
       }
    }
+   #ingredients_ {
+      height: 35px;
+      width: 500px;
+      font-size: 1.5rem;
+   }
    #add_more_button{
       border: none;
       cursor: pointer;
       font-family: 'Roboto Condensed', sans-serif;
       background-color: #ff8c00;
+      height: 30px;
    }
    #ingredient_search{
       border: none;
@@ -300,6 +306,8 @@
       font-family: 'Roboto Condensed', sans-serif;
       color: white;
       background-color: #b50000;
+      height: 30px;
+      width: 100px;
    }
    #recipe_responses{
       display: flex;
