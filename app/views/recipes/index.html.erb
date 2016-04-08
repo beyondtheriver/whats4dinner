@@ -2,6 +2,9 @@
 	<%= render 'banner' %>
   <h2><%= link_to "What's 4 Dinner", root_path %></h2>
 </div>
+<span id="top">
+<button id="button_style" class="log_out"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
+</span>
 <div id="whole_page_wrapper">
    <div id="profile_partial">
       <%= render partial: "profiles/show", locals: { profile: @profile } %>

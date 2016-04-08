@@ -1,6 +1,9 @@
 <div id="banner">
   <h2><%= link_to "Search Recipes", recipes_path, class: "searchlink" %><%= link_to "What's 4 Dinner", recipes_path %></h2>
 </div>
+<span id="top">
+<button id="button_style" class="log_out"><%= link_to "Log out", destroy_user_session_path, method: :delete %></button>
+</span>
 <div id="profile_wrapper">
    <h2>Edit Your Profile</h2>
    <%= form_for @profile, :html => { :multipart => true } do |f| %>

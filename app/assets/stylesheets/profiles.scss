@@ -49,6 +49,35 @@
             color: hotpink;
          }
    }
+
+   #button_style{
+         font-family: 'Pacifico', cursive;
+         font-size: 0.9rem;
+         color: #e6cc22;
+         width: 10%;
+         height: 40px;
+         background-color: #ff8c00;
+         padding: 0;
+         border: none;
+         border-radius: 10%;
+            a:link{
+               text-decoration: none;
+               color: #e6cc22;
+            }
+            a:hover{
+               color: hotpink;
+            }
+      }
+      .log_out{
+         position: absolute;
+         top: 70px;
+         right: 25px;
+      }
+   #top{
+      display: flex;
+      flex-wrap: wrap;
+   }
+
    #come_in_form{
       width: 55%;
       margin: auto;
