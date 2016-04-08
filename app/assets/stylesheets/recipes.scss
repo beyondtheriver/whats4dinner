@@ -27,6 +27,33 @@
          color: hotpink;
       }
    }
+   #button_style{
+      font-family: 'Pacifico', cursive;
+      font-size: 0.9rem;
+      color: white;
+      width: 8%;
+      height: 40px;
+      background-color: #ff8c00;
+      padding: 0;
+      border: none;
+      border-radius: 10%;
+         a:link{
+            text-decoration: none;
+            color: white;
+         }
+         a:hover{
+            color: hotpink;
+         }
+   }
+   .log_out{
+      position: absolute;
+      top: 70px;
+      right: 40px;
+   }
+   #top{
+      display: flex;
+      flex-wrap: wrap;
+   }
    #add_more_button{
       border: none;
       cursor: pointer;
