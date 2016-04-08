@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'paperclip', '~> 4.2'
 gem 'devise'
 gem 'omniauth-twitter', :github => 'arunagw/omniauth-twitter'
 gem 'unirest'
@@ -27,7 +28,7 @@ group :development do
 
   gem 'spring'
 end
-group :production do   
+group :production do
       gem 'pg'
 end
 

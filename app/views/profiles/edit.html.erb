@@ -3,12 +3,15 @@
 </div>
 <div id="profile_wrapper">
    <h2>Edit Your Profile</h2>
-   <%= form_for @profile do |f| %>
+   <%= form_for @profile, :html => { :multipart => true } do |f| %>
    <%= f.label :f_name, "First Name" %>
    <%= f.text_field :f_name %>
    <br>
    <%= f.label :l_name, "Last Name" %>
    <%= f.text_field :l_name %>
+   <br>
+   <%= f.label :avatar %>
+   <%= f.file_field :avatar %>
    <br>
    <%= f.submit :update, :class => "form_button" %>
    <% end %>
