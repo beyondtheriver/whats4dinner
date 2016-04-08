@@ -21,6 +21,6 @@ test:
 
 production:
   <<: *default
-  database: whats4dinner_production
+  database: whats4dinner
   username: rails
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>
