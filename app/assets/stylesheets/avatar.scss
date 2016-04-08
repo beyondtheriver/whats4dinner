@@ -15,3 +15,10 @@
    margin-left: 10px;
    font-family: 'Pacifico', cursive;
 }
+#twitter_bird{
+   transition-duration: 0.3s;
+   transition-property: transform;
+}
+#twitter_bird:hover{
+   transform: scale(1.2) translateY(-8px);
+}
