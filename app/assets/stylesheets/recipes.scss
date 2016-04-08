@@ -11,6 +11,16 @@
       padding: 10%;
       max-width: 80%;
       color: white;
+      a:link{
+         text-decoration: none;
+         color: white;
+      }
+      a:visited{
+         color: white;
+      }
+      a:hover{
+         color: hotpink;
+      }
    }
    #recipe_wrapper{
       font-family: 'Roboto Condensed', sans-serif;
