@@ -1,5 +1,5 @@
 
-  <h2><%= profile.f_name %>'s Profile</h2>
+  <h2><%= link_to profile.f_name + "'s Profile", profile  %></h2>
   <%= image_tag @profile.avatar.url, :id => "avatar" %>
   <p>Name: <%= profile.f_name %> <%= profile.l_name %></p>
 
